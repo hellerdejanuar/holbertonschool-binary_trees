@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_postorder - goes through a binary tree using post-order traversal
+ * binary_tree_postorder - goes through a binary tree using post-order trvers
  * @tree: tree
  * @func: ptr to a function to apply to all the nodes in post-order sequence
  * args (tree->n)
@@ -16,6 +16,6 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 
 	if (tree->right != NULL)
 		binary_tree_postorder(tree->right, func);
-	
+
 	func(tree->n);
 }
