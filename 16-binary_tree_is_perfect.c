@@ -1,5 +1,9 @@
 #include "binary_trees.h"
-
+/**
+ * binary_tree_is_leaf - checks if tree is leaf
+ * @tree: tree
+ * Return: -1 if tree = NULL, 0 if not a leaf, 1 if leaf
+ */
 int binary_tree_is_leaf(const binary_tree_t *tree)
 {
 	if (!tree)
@@ -11,9 +15,9 @@ int binary_tree_is_leaf(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_nodes - counts nodes downstream w/ at least one child
+ * binary_tree_perfect - checks if tree is perfect
  * @tree: tree
- * Return: 0 if tree is NULL, <node count> on success
+ * Return: 1 if perfect, 0 if not or FAIL
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -30,8 +34,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  * is_perfect_recursion - auxiliary fuction to recursively check the
  * depth of all the leaves and compare between them
  * @tree: tree
- * Return: -1 if depth of left and right are different
- * othewise returns the depth of the leave.
+ * Return: if a leaf is found returns its <depth>
+ * all non leaf nodes will just compare and pass the value
+ * if values differ return -1
  */
 int is_perfect_recursion(const binary_tree_t *tree)
 {
@@ -54,7 +59,6 @@ int is_perfect_recursion(const binary_tree_t *tree)
 		return (depth_l);
 }
 
-#include "binary_trees.h"
 /**
  * binary_tree_depth - measures the depth of a binary tree
  * @tree: pointer to the tree node
