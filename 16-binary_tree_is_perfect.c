@@ -15,7 +15,7 @@ int binary_tree_is_leaf(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_perfect - checks if tree is perfect
+ * binary_tree_is_perfect - checks if tree is perfect
  * @tree: tree
  * Return: 1 if perfect, 0 if not or FAIL
  */
@@ -63,7 +63,6 @@ int is_perfect_recursion(const binary_tree_t *tree)
  * binary_tree_depth - measures the depth of a binary tree
  * @tree: pointer to the tree node
  * Return: If tree is NULL return is 0
- *
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
